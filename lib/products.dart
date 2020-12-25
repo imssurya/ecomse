@@ -30,12 +30,14 @@ class _ProductsState extends State<Products> {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      scrollDirection: Axis.vertical,
+      shrinkWrap: true,
       gridDelegate:
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       itemBuilder: (BuildContext context, int index) {
-        SingleProd(
+        return SingleProd(
           prod_name: product_list[index]['name'],
-          prod_picture: null,
+          prod_picture: "null",
           prod_old_price: product_list[index]['old_price'],
           prod_price: product_list[index]['price'],
         );

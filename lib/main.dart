@@ -137,7 +137,14 @@ class _MyAppState extends State<MyApp> {
                   style: TextStyle(fontSize: 17.0, fontWeight: FontWeight.bold),
                 ),
               ),
-              Products(),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: Colors.red[100],
+                  height: 320.0,
+                  child: Products(),
+                ),
+              )
             ],
           )),
     );
