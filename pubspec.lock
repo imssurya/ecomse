@@ -36,6 +36,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.5.0"
+  carousel_pro:
+    dependency: "direct main"
+    description:
+      name: carousel_pro
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   carousel_slider:
     dependency: "direct main"
     description:
@@ -156,7 +163,7 @@ packages:
     source: hosted
     version: "0.3.2+3"
   firebase_core:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: firebase_core
       url: "https://pub.dartlang.org"

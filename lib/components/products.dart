@@ -1,4 +1,4 @@
-import 'package:ecomse/single_prod.dart';
+import 'package:ecomse/components/single_prod.dart';
 import 'package:flutter/material.dart';
 
 class Products extends StatefulWidget {

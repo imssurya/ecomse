@@ -15,6 +15,9 @@ class HorizontalList extends StatelessWidget {
             image_caption: "dress",
           ),
           Category(
+            image_caption: "jeans",
+          ),
+          Category(
             image_caption: "formal",
           ),
           Category(
@@ -43,7 +46,7 @@ class Category extends StatelessWidget {
             width: 100.0,
             child: ListTile(
               title: FlutterLogo(
-                size: 100.0,
+                size: 60.0,
               ),
               subtitle: Container(
                   alignment: Alignment.topCenter,

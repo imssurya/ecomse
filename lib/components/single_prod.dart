@@ -1,4 +1,4 @@
-import 'package:ecomse/productdetail.dart';
+import 'package:ecomse/pages/productdetail.dart';
 import 'package:flutter/material.dart';
 
 class SingleProd extends StatelessWidget {
