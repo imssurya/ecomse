@@ -16,10 +16,11 @@ class _SignUpState extends State<SignUp> {
   TextEditingController nameController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
   String gender;
+  String groupValue = 'male';
   bool loading = false;
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height / 3;
+    // double height = MediaQuery.of(context).size.height / 3;
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -64,6 +65,48 @@ class _SignUpState extends State<SignUp> {
                                 return null;
                               },
                             ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 8.0),
+                        child: Container(
+                          color: Colors.white.withOpacity(0.4),
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: ListTile(
+                                  title: Text(
+                                    'male',
+                                    textAlign: TextAlign.end,
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  trailing: Radio(
+                                    value: 'male',
+                                    groupValue: groupValue,
+                                    onChanged: (e) {
+                                      valueChanged(e);
+                                    },
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: ListTile(
+                                  title: Text(
+                                    'female',
+                                    textAlign: TextAlign.end,
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  trailing: Radio(
+                                    value: 'female',
+                                    groupValue: groupValue,
+                                    onChanged: (e) {
+                                      valueChanged(e);
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -149,13 +192,13 @@ class _SignUpState extends State<SignUp> {
                         padding: EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 8.0),
                         child: Material(
                           borderRadius: BorderRadius.circular(20.0),
-                          color: Colors.blue.shade700,
+                          color: Colors.red.shade700,
                           elevation: 0.0,
                           child: MaterialButton(
                             onPressed: () {},
                             minWidth: MediaQuery.of(context).size.width,
                             child: Text(
-                              'Register',
+                              'Sign up',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,
@@ -175,7 +218,7 @@ class _SignUpState extends State<SignUp> {
                           child: Text(
                             'Login',
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.red),
+                            style: TextStyle(color: Colors.blue),
                           ),
                         ),
                       )
@@ -200,5 +243,15 @@ class _SignUpState extends State<SignUp> {
         ],
       ),
     );
+  }
+
+  void valueChanged(e) {
+    setState(() {
+      if (e == 'male') {
+        groupValue = e;
+      } else if (e == 'female') {
+        groupValue = e;
+      }
+    });
   }
 }
